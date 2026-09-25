@@ -1,2 +1,2 @@
 # ThreadCo
-This is my first Git Repoditory
+This is my first Git Repository
