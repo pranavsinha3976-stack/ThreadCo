@@ -1,0 +1,34 @@
+class Solution {
+  public:
+//   void count(vector<int>& brr,int i,int j){
+//       for(int k=0;k<i;k++){
+//           brr[k]=0;
+//       }
+//       for(int k=i;k<i+j;k++){
+//           brr[k]=1;
+//       }
+//   }
+    void segregate0and1(vector<int> &arr) {
+        // code here
+        // int zeros=0;
+        // int ones=0;
+        // for(int i=0;i<arr.size();i++){
+        //     if(arr[i]==0)  zeros++;
+        //     else
+        //     ones++;
+        // }
+        // count(arr,zeros,ones);
+        int i=0;
+        int j=arr.size()-1;
+        while(i<j){
+            if(arr[i]==1 && arr[j]==0){
+                swap(arr[i],arr[j]);
+                i++;
+                j--;
+            }
+            else if(arr[i]==0) i++;
+            else
+            j--;
+        }
+    }
+};
